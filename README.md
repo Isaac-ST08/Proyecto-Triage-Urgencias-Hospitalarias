@@ -1,2 +1,4 @@
 # Proyecto-Triage-Urgencias-Hospitalarias
-Este sistema automatiza la clasificación de admisiones mediante niveles de triage, asigna espacios de atención y camas en tiempo real, gestiona la disponibilidad del personal médico y simula el flujo operativo hospitalario
+En los servicios de urgencias hospitalarias, la atención tardía por falta de categorización adecuada incrementa el riesgo de complicación crítica o fallecimiento en pacientes con prioridades altas. La sobrecarga asistencial, la falta de visibilidad en la ocupación de camas por turno y la ineficiencia en el flujo de asignación a consultorios generan tiempos de espera prolongados y cuellos de botella informativos.
+
+Este sistema automatiza la clasificación de admisiones mediante niveles de triage, asigna espacios de atención y camas en tiempo real, gestiona la disponibilidad del personal médico y simula el flujo operativo hospitalario. El desarrollo beneficia directamente al personal administrativo de admisiones, al personal médico de turno y a la dirección hospitalaria para la toma de decisiones basada en indicadores operativos.
