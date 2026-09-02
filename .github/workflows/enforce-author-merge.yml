@@ -1,0 +1,23 @@
+name: "Enforce Author-Only Merge"
+
+on: 
+  pull_request_target:
+    types: [closed]
+
+jobs:
+  valitade-merger:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verificar si el asignado al merge es el autor
+        run: |
+          PR_AUTHOR="${{ github.event.pull_request.user.login}}"
+          MERGE_ACTOR="${{github.actor}}"
+          echo "Autor original del PR: $PR_AUTHOR"
+          echo "Persona que hizo Merge: $MERGE_ACTOR"
+
+          if ["$PR_AUTHOR" != "$MERGE_ACTOR"]; then
+            echo "::error::Violación de política."
+            exit 1
+          fi
+          
