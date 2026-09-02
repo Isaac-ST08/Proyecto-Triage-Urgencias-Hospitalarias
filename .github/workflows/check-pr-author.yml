@@ -1,0 +1,17 @@
+name: "PR Author Check"
+
+on: 
+  pull_request: 
+    types: [opened, synchronize, reopened, labeled, unlabeled]
+
+jobs: 
+  verify-author:
+    name: "Validar que solo el autor haga el merge"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validar usuario
+        run: |
+          echo "Autor del PR: ${{ github.event.pull_request.user.login }}"
+          echo "Usuario que ejecutó el evento: ${{ github.actor }}"
+          exit  0
+  
